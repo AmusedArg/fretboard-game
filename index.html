@@ -27,7 +27,7 @@
 			});
 			$('.items-escala').click(function(event) {
 				scaleMode = $(this).attr('data-escala');
-				$('#escala').html('Escala: ' + scaleMode + '<span id="tonalidad"></span>' + '<span id="notes-list"></span>');
+				$('#escala').html('Escala: ' + $(this).attr('data-name-escala') + '<span id="tonalidad"></span>' + '<span id="notes-list"></span>');
 				escala = buildScale(scaleMode, key);
 				$('#pattern').html(escala.pattern);
 				$('.card').css('visibility', 'visible');
@@ -118,10 +118,10 @@
 	          Escala
 	        </a>
 	        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-	          <a class="dropdown-item items-escala" href="#" data-escala="Mayor">Mayor</a>
-	          <a class="dropdown-item items-escala" href="#" data-escala="Menor">Menor</a>
-	          <a class="dropdown-item items-escala" href="#" data-escala="Pentatónica Mayor">Pentatónica Mayor</a>
-	          <a class="dropdown-item items-escala" href="#" data-escala="Pentatónica Menor">Pentatónica Menor</a>
+	          <a class="dropdown-item items-escala" href="#" data-escala="Mayor" data-name-escala="Mayor">Mayor</a>
+	          <a class="dropdown-item items-escala" href="#" data-escala="Menor" data-name-escala="Menor">Menor</a>
+	          <a class="dropdown-item items-escala" href="#" data-escala="PentaMayor" data-name-escala="Pentatónica Mayor">Pentatónica Mayor</a>
+	          <a class="dropdown-item items-escala" href="#" data-escala="PentaMenor" data-name-escala="Pentatónica Menor">Pentatónica Menor</a>
 	        </div>
 	      </li>
 	      <li class="nav-item dropdown">
