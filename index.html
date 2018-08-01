@@ -43,7 +43,7 @@
 			});
 			$('#view-notes-btn').click(function(event) {
 				$(this).toggleClass('active');
-				if($(this).hasClass('active')){
+				if($(this).hasClass('active') && escala.scale){
 					$('#notes-list').html('&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/&nbsp;&nbsp;&nbsp;' + escala.scale.join(", "));
 				}else{
 					$('#notes-list').html('');
@@ -55,7 +55,9 @@
 			if(escala && tono){
 				s.scale = Escalas[escala][tono];
 				s.pattern = Escalas[escala].pattern;
-				s.key = s.scale[0];
+				if(s.scale){
+					s.key = s.scale[0];
+				}
 				return s;
 			}
 			if(escala && !tono){

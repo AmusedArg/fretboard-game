@@ -67,42 +67,42 @@ nav{
 .fret-dot-container.fret-G-1{top: 39%; width: 68px; left: 9%;}
 .fret-dot-container.fret-D-1{top: 49%; width: 68px; left: 9%;}
 .fret-dot-container.fret-A-1{top: 59%; width: 68px; left: 9%;}
-.fret-dot-container.fret-E-1{top: 69%; width: 68px; left: 9%;}
+.fret-dot-container.fret-E-1{top: 70%; width: 68px; left: 9%;}
 
 .fret-dot-container.fret-e-2{top: 19%; width: 68px; left: 15%;}
 .fret-dot-container.fret-B-2{top: 29%; width: 68px; left: 15%;}
 .fret-dot-container.fret-G-2{top: 39%; width: 68px; left: 15%;}
 .fret-dot-container.fret-D-2{top: 49%; width: 68px; left: 15%;}
 .fret-dot-container.fret-A-2{top: 59%; width: 68px; left: 15%;}
-.fret-dot-container.fret-E-2{top: 69%; width: 68px; left: 15%;}
+.fret-dot-container.fret-E-2{top: 70%; width: 68px; left: 15%;}
 
 .fret-dot-container.fret-e-3{top: 18.5%; width: 68px; left: 20.9%;}
 .fret-dot-container.fret-B-3{top: 29%; width: 68px; left: 20.9%;}
 .fret-dot-container.fret-G-3{top: 39%; width: 68px; left: 20.9%;}
 .fret-dot-container.fret-D-3{top: 49%; width: 68px; left: 20.9%;}
 .fret-dot-container.fret-A-3{top: 60%; width: 68px; left: 20.9%;}
-.fret-dot-container.fret-E-3{top: 70%; width: 68px; left: 20.9%;}
+.fret-dot-container.fret-E-3{top: 71%; width: 68px; left: 20.9%;}
 
 .fret-dot-container.fret-e-4{top: 18%; width: 68px; left: 26.2%;}
 .fret-dot-container.fret-B-4{top: 29%; width: 68px; left: 26.2%;}
 .fret-dot-container.fret-G-4{top: 39%; width: 68px; left: 26.2%;}
 .fret-dot-container.fret-D-4{top: 49%; width: 68px; left: 26.2%;}
 .fret-dot-container.fret-A-4{top: 60%; width: 68px; left: 26.2%;}
-.fret-dot-container.fret-E-4{top: 70.7%; width: 68px; left: 26.2%;}
+.fret-dot-container.fret-E-4{top: 72%; width: 68px; left: 26.2%;}
 
 .fret-dot-container.fret-e-5{top: 17%; width: 68px; left: 31.2%;}
 .fret-dot-container.fret-B-5{top: 28%; width: 68px; left: 31.2%;}
 .fret-dot-container.fret-G-5{top: 38.5%; width: 68px; left: 31.2%;}
 .fret-dot-container.fret-D-5{top: 49.5%; width: 68px; left: 31.2%;}
 .fret-dot-container.fret-A-5{top: 60.5%; width: 68px; left: 31.2%;}
-.fret-dot-container.fret-E-5{top: 71.5%; width: 68px; left: 31.2%;}
+.fret-dot-container.fret-E-5{top: 72.5%; width: 68px; left: 31.2%;}
 
 .fret-dot-container.fret-e-6{top: 16.7%; width: 60px; left: 36.7%;}
 .fret-dot-container.fret-B-6{top: 28%; width: 60px; left: 36.7%;}
 .fret-dot-container.fret-G-6{top: 38.5%; width: 60px; left: 36.7%;}
 .fret-dot-container.fret-D-6{top: 49.3%; width: 60px; left: 36.7%;}
 .fret-dot-container.fret-A-6{top: 61%; width: 60px; left: 36.7%;}
-.fret-dot-container.fret-E-6{top: 72%; width: 60px; left: 36.7%;}
+.fret-dot-container.fret-E-6{top: 73%; width: 60px; left: 36.7%;}
 
 .fret-dot-container.fret-e-7{top: 16.5%; width: 60px; left: 41%;}
 .fret-dot-container.fret-B-7{top: 28%; width: 60px; left: 41%;}
@@ -215,3 +215,163 @@ nav{
 .fret-dot-container.fret-D-22{top: 51%; width: 25px; left: 88%;}
 .fret-dot-container.fret-A-22{top: 65%; width: 25px; left: 88%;}
 .fret-dot-container.fret-E-22{top: 78.5%; width: 25px; left: 88%;}
+
+@media (max-width: 1300px) {
+    #fretboard{
+        height: 230px;
+        object-fit: initial;
+    }
+    .fret-dot-container.fret-e-1{top: 24%; width: 66px; left: 105px;}
+    .fret-dot-container.fret-B-1{top: 32.5%; width: 66px; left: 105px;}
+    .fret-dot-container.fret-G-1{top: 41%; width: 66px; left: 105px;}
+    .fret-dot-container.fret-D-1{top: 50%; width: 66px; left: 105px;}
+    .fret-dot-container.fret-A-1{top: 58.5%; width: 66px; left: 105px;}
+    .fret-dot-container.fret-E-1{top: 67%; width: 66px; left: 105px;}
+
+    .fret-dot-container.fret-e-2{top: 24%; width: 66px; left: 173px;}
+    .fret-dot-container.fret-B-2{top: 32.5%; width: 66px; left: 173px;}
+    .fret-dot-container.fret-G-2{top: 41%; width: 66px; left: 173px;}
+    .fret-dot-container.fret-D-2{top: 50%; width: 66px; left: 173px;}
+    .fret-dot-container.fret-A-2{top: 58.5%; width: 66px; left: 173px;}
+    .fret-dot-container.fret-E-2{top: 68%; width: 66px; left: 173px;}
+
+    .fret-dot-container.fret-e-3{top: 23%; width: 60px; left: 245px;}
+    .fret-dot-container.fret-B-3{top: 32%; width: 60px; left: 245px;}
+    .fret-dot-container.fret-G-3{top: 41%; width: 60px; left: 245px;}
+    .fret-dot-container.fret-D-3{top: 50%; width: 60px; left: 245px;}
+    .fret-dot-container.fret-A-3{top: 59%; width: 60px; left: 245px;}
+    .fret-dot-container.fret-E-3{top: 69%; width: 60px; left: 245px;}
+
+    .fret-dot-container.fret-e-4{top: 23%; width: 60px; left: 308px;}
+    .fret-dot-container.fret-B-4{top: 32%; width: 60px; left: 308px;}
+    .fret-dot-container.fret-G-4{top: 41%; width: 60px; left: 308px;}
+    .fret-dot-container.fret-D-4{top: 50%; width: 60px; left: 308px;}
+    .fret-dot-container.fret-A-4{top: 59%; width: 60px; left: 308px;}
+    .fret-dot-container.fret-E-4{top: 69%; width: 60px; left: 308px;}
+
+    .fret-dot-container.fret-e-5{top: 22%; width: 60px; left: 365px;}
+    .fret-dot-container.fret-B-5{top: 31.5%; width: 60px; left: 365px;}
+    .fret-dot-container.fret-G-5{top: 41%; width: 60px; left: 365px;}
+    .fret-dot-container.fret-D-5{top: 50%; width: 60px; left: 365px;}
+    .fret-dot-container.fret-A-5{top: 59.5%; width: 60px; left: 365px;}
+    .fret-dot-container.fret-E-5{top: 70%; width: 60px; left: 365px;}
+
+    .fret-dot-container.fret-e-6{top: 21.7%; width: 55px; left: 427px;}
+    .fret-dot-container.fret-B-6{top: 31%; width: 55px; left: 427px;}
+    .fret-dot-container.fret-G-6{top: 41%; width: 55px; left: 427px;}
+    .fret-dot-container.fret-D-6{top: 50%; width: 55px; left: 427px;}
+    .fret-dot-container.fret-A-6{top: 59.5%; width: 55px; left: 427px;}
+    .fret-dot-container.fret-E-6{top: 70%; width: 55px; left: 427px;}
+
+    .fret-dot-container.fret-e-7{top: 21.7%; width: 50px; left: 485px;}
+    .fret-dot-container.fret-B-7{top: 31%; width: 50px; left: 485px;}
+    .fret-dot-container.fret-G-7{top: 41%; width: 50px; left: 485px;}
+    .fret-dot-container.fret-D-7{top: 50.5%; width: 50px; left: 485px;}
+    .fret-dot-container.fret-A-7{top: 60%; width: 50px; left: 485px;}
+    .fret-dot-container.fret-E-7{top: 70.5%; width: 50px; left: 485px;}
+
+    .fret-dot-container.fret-e-8{top: 21%; width: 45px; left: 540px;}
+    .fret-dot-container.fret-B-8{top: 31%; width: 45px; left: 540px;}
+    .fret-dot-container.fret-G-8{top: 41%; width: 45px; left: 540px;}
+    .fret-dot-container.fret-D-8{top: 50.5%; width: 45px; left: 540px;}
+    .fret-dot-container.fret-A-8{top: 61%; width: 45px; left: 540px;}
+    .fret-dot-container.fret-E-8{top: 71%; width: 45px; left: 540px;}
+
+    .fret-dot-container.fret-e-9{top: 20.7%; width: 44px; left: 587px;}
+    .fret-dot-container.fret-B-9{top: 31%; width: 44px; left: 587px;}
+    .fret-dot-container.fret-G-9{top: 41%; width: 44px; left: 587px;}
+    .fret-dot-container.fret-D-9{top: 50.5%; width: 44px; left: 587px;}
+    .fret-dot-container.fret-A-9{top: 61.5%; width: 44px; left: 587px;}
+    .fret-dot-container.fret-E-9{top: 72%; width: 44px; left: 587px;}
+
+    .fret-dot-container.fret-e-10{top: 20%; width: 40px; left: 635px;}
+    .fret-dot-container.fret-B-10{top: 31%; width: 40px; left: 635px;}
+    .fret-dot-container.fret-G-10{top: 40.5%; width: 40px; left: 635px;}
+    .fret-dot-container.fret-D-10{top: 51%; width: 40px; left: 635px;}
+    .fret-dot-container.fret-A-10{top: 62%; width: 40px; left: 635px;}
+    .fret-dot-container.fret-E-10{top: 72.5%; width: 40px; left: 635px;}
+
+    .fret-dot-container.fret-e-11{top: 19.5%; width: 40px; left: 675px;}
+    .fret-dot-container.fret-B-11{top: 31%; width: 40px; left: 675px;}
+    .fret-dot-container.fret-G-11{top: 40.5%; width: 40px; left: 675px;}
+    .fret-dot-container.fret-D-11{top: 51%; width: 40px; left: 675px;}
+    .fret-dot-container.fret-A-11{top: 62%; width: 40px; left: 675px;}
+    .fret-dot-container.fret-E-11{top: 73%; width: 40px; left: 675px;}
+
+    .fret-dot-container.fret-e-12{top: 19%; width: 40px; left: 718px;}
+    .fret-dot-container.fret-B-12{top: 30.5%; width: 40px; left: 718px;}
+    .fret-dot-container.fret-G-12{top: 40.5%; width: 40px; left: 718px;}
+    .fret-dot-container.fret-D-12{top: 51%; width: 40px; left: 718px;}
+    .fret-dot-container.fret-A-12{top: 62.5%; width: 40px; left: 718px;}
+    .fret-dot-container.fret-E-12{top: 73%; width: 40px; left: 718px;}
+
+    .fret-dot-container.fret-e-13{top: 19%; width: 32px; left: 762px;}
+    .fret-dot-container.fret-B-13{top: 30.5%; width: 32px; left: 762px;}
+    .fret-dot-container.fret-G-13{top: 40.5%; width: 32px; left: 762px;}
+    .fret-dot-container.fret-D-13{top: 51%; width: 32px; left: 762px;}
+    .fret-dot-container.fret-A-13{top: 63%; width: 32px; left: 762px;}
+    .fret-dot-container.fret-E-13{top: 73.5%; width: 32px; left: 762px;}
+
+    .fret-dot-container.fret-e-14{top: 19%; width: 32px; left: 796px;}
+    .fret-dot-container.fret-B-14{top: 30.5%; width: 32px; left: 796px;}
+    .fret-dot-container.fret-G-14{top: 40.5%; width: 32px; left: 796px;}
+    .fret-dot-container.fret-D-14{top: 51%; width: 32px; left: 796px;}
+    .fret-dot-container.fret-A-14{top: 63.5%; width: 32px; left: 796px;}
+    .fret-dot-container.fret-E-14{top: 74%; width: 32px; left: 796px;}
+
+    .fret-dot-container.fret-e-15{top: 19%; width: 30px; left: 830px;}
+    .fret-dot-container.fret-B-15{top: 30.5%; width: 30px; left: 830px;}
+    .fret-dot-container.fret-G-15{top: 40.5%; width: 30px; left: 830px;}
+    .fret-dot-container.fret-D-15{top: 51%; width: 30px; left: 830px;}
+    .fret-dot-container.fret-A-15{top: 64%; width: 30px; left: 830px;}
+    .fret-dot-container.fret-E-15{top: 74.5%; width: 30px; left: 830px;}
+
+    .fret-dot-container.fret-e-16{top: 19%; width: 22px; left: 870px;}
+    .fret-dot-container.fret-B-16{top: 30.5%; width: 22px; left: 870px;}
+    .fret-dot-container.fret-G-16{top: 40.5%; width: 22px; left: 870px;}
+    .fret-dot-container.fret-D-16{top: 51.5%; width: 22px; left: 870px;}
+    .fret-dot-container.fret-A-16{top: 64%; width: 22px; left: 870px;}
+    .fret-dot-container.fret-E-16{top: 75%; width: 22px; left: 870px;}
+
+    .fret-dot-container.fret-e-17{top: 19%; width: 20px; left: 902px;}
+    .fret-dot-container.fret-B-17{top: 30.5%; width: 20px; left: 902px;}
+    .fret-dot-container.fret-G-17{top: 40.5%; width: 20px; left: 902px;}
+    .fret-dot-container.fret-D-17{top: 51.5%; width: 20px; left: 902px;}
+    .fret-dot-container.fret-A-17{top: 64.5%; width: 20px; left: 902px;}
+    .fret-dot-container.fret-E-17{top: 75.5%; width: 20px; left: 902px;}
+
+    .fret-dot-container.fret-e-18{top: 18.5%; width: 20px; left: 930px;}
+    .fret-dot-container.fret-B-18{top: 30%; width: 20px; left: 930px;}
+    .fret-dot-container.fret-G-18{top: 40.5%; width: 20px; left: 930px;}
+    .fret-dot-container.fret-D-18{top: 51.5%; width: 20px; left: 930px;}
+    .fret-dot-container.fret-A-18{top: 64.5%; width: 20px; left: 930px;}
+    .fret-dot-container.fret-E-18{top: 75.5%; width: 20px; left: 930px;}
+
+    .fret-dot-container.fret-e-19{top: 18.5%; width: 25px; left: 952px;}
+    .fret-dot-container.fret-B-19{top: 30%; width: 25px; left: 952px;}
+    .fret-dot-container.fret-G-19{top: 40.5%; width: 25px; left: 952px;}
+    .fret-dot-container.fret-D-19{top: 51.5%; width: 25px; left: 952px;}
+    .fret-dot-container.fret-A-19{top: 64.5%; width: 25px; left: 952px;}
+    .fret-dot-container.fret-E-19{top: 76%; width: 25px; left: 952px;}
+
+    .fret-dot-container.fret-e-20{top: 18%; width: 18px; left: 985px;}
+    .fret-dot-container.fret-B-20{top: 30%; width: 18px; left: 985px;}
+    .fret-dot-container.fret-G-20{top: 40.5%; width: 18px; left: 985px;}
+    .fret-dot-container.fret-D-20{top: 51.5%; width: 18px; left: 985px;}
+    .fret-dot-container.fret-A-20{top: 64%; width: 18px; left: 985px;}
+    .fret-dot-container.fret-E-20{top: 76.5%; width: 18px; left: 985px;}
+
+    .fret-dot-container.fret-e-21{top: 18%; width: 18px; left: 1008px;}
+    .fret-dot-container.fret-B-21{top: 30%; width: 18px; left: 1008px;}
+    .fret-dot-container.fret-G-21{top: 40.5%; width: 18px; left: 1008px;}
+    .fret-dot-container.fret-D-21{top: 51.5%; width: 18px; left: 1008px;}
+    .fret-dot-container.fret-A-21{top: 64%; width: 18px; left: 1008px;}
+    .fret-dot-container.fret-E-21{top: 76.5%; width: 18px; left: 1008px;}
+
+    .fret-dot-container.fret-e-22{top: 18%; width: 18px; left: 1031px;}
+    .fret-dot-container.fret-B-22{top: 30%; width: 18px; left: 1031px;}
+    .fret-dot-container.fret-G-22{top: 40.5%; width: 18px; left: 1031px;}
+    .fret-dot-container.fret-D-22{top: 51.5%; width: 18px; left: 1031px;}
+    .fret-dot-container.fret-A-22{top: 64%; width: 18px; left: 1031px;}
+    .fret-dot-container.fret-E-22{top: 76.5%; width: 18px; left: 1031px;}
+}
