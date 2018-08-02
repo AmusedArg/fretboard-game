@@ -17,6 +17,7 @@ nav{
 #fretboard{
     object-fit: cover;
     height: 190px;
+    min-width: 1038px;
     border-radius: 20px;
     margin-left: 3em;
 }
@@ -57,9 +58,11 @@ nav{
     visibility: hidden;
     box-shadow: 1px 1px 5px -2px;
 }
-
 #view-notes-btn{
 	display: none;
+}
+#notes-list{
+    margin-left: 1em;
 }
 
 .fret-dot-container.fret-e-1{top: 19%; width: 68px; left: 9%;}

@@ -10,103 +10,48 @@
 	<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
 	<script src="assets/js/escalas.js"></script>
+	<script src="assets/js/ScaleHandler.js"></script>
 	<script>
-		var escala = {};
-		var scaleMode;
-		var key;
 		$(document).ready(function() {
-			$(".fret-dot").each(function(index, el) {
-				$(this).html($(this).attr('data-note'));
-			});
+			ScaleHandler.init();
 			$('.fret-dot-container').click(function(event) {
 				var fret = $(this).attr('data-fret');
-				$('span[data-fret="'+fret+'"]').toggle();
-				var span = $('span[data-fret="'+fret+'"]');
-				var note = span.attr('data-note');
-				pintarNota(note, span);
+				ScaleHandler.paintNoteDot(fret);
 			});
 			$('.items-escala').click(function(event) {
 				scaleMode = $(this).attr('data-escala');
+				$('.items-escala').removeClass('active');
+				$(this).addClass('active');
+				var escala = ScaleHandler.updateScale(scaleMode, null);
 				$('#escala').html('Escala: ' + $(this).attr('data-name-escala') + '<span id="tonalidad"></span>' + '<span id="notes-list"></span>');
-				escala = buildScale(scaleMode, key);
 				$('#pattern').html(escala.pattern);
-				$('.card').css('visibility', 'visible');
-				$('.fret-dot').hide();
 				if(escala.key){
 					$('#tonalidad').html(' ' + escala.key);
 				}
+				$('.card').css('visibility', 'visible');
+				ScaleHandler.clearFretboard();
 			});
 			$('.items-tonalidad').click(function(event) {
+				$('.items-tonalidad').removeClass('active');
+				$(this).addClass('active');
 				key = $(this).attr('data-tonalidad');
 				$('#tonalidad').html(' ' + key);
-				escala = buildScale(scaleMode, key);
-				$('.fret-dot').hide();			
-				$('#view-notes-btn').show();
 				$('#notes-list').html('');
+				$('#view-notes-btn').show();
 				$('#view_notes-btn').removeClass('active');
+				ScaleHandler.updateScale(null, key);
+				ScaleHandler.clearFretboard();		
 			});
 			$('#view-notes-btn').click(function(event) {
 				$(this).toggleClass('active');
-				if($(this).hasClass('active') && escala.scale){
-					$('#notes-list').html('&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/&nbsp;&nbsp;&nbsp;' + escala.scale.join(", "));
+				var notes = ScaleHandler.getCurrentScale().notes;
+				if($(this).hasClass('active') && notes){
+					$('#notes-list').html('/&nbsp;&nbsp;&nbsp;' + notes.join(", "));
 				}else{
 					$('#notes-list').html('');
 				}
 			});
 		});
-		function buildScale(escala, tono){
-			var s = {};
-			if(escala && tono){
-				s.scale = Escalas[escala][tono];
-				s.pattern = Escalas[escala].pattern;
-				if(s.scale){
-					s.key = s.scale[0];
-				}
-				return s;
-			}
-			if(escala && !tono){
-				s.pattern = Escalas[escala].pattern;
-				return s;
-			}
-			if(!escala){
-				return {}; // necesito el modo
-			}
-		}
-
-		function pintarNota(note, el){
-			if(escala.scale){
-				for (var i = 0; i < escala.scale.length; i++) {
-					if(escala.scale[i] === note){
-						if(escala.key === note){
-							el.css('background-color', '#ff9800');
-						}else{
-							el.css('background-color', '#8BC34A');
-						}
-						return true;
-					}
-				}
-				el.css('background-color', 'red');
-				setTimeout(function(){
-					el.animate({opacity: 0}, 'slow', function(){
-						el.hide();
-						el.css('opacity', 1);
-					});
-
-				},500);
-			}
-		}
-
-		function isNoteInScale(note){
-			if(escala.scale){
-				for (var i = 0; i < escala.scale.length; i++) {
-					if(escala.scale[i] === note){
-						return true;
-					}
-				}
-				return false;
-			}
-			return false;
-		}
 	</script>
 </head>
 <body>
@@ -128,7 +73,7 @@
 	          <a class="dropdown-item items-escala" href="#" data-escala="PentaMenor" data-name-escala="Pentatónica Menor">Pentatónica Menor</a>
 	        </div>
 	      </li>
-	      <li class="nav-item dropdown">
+	      <li class="nav-item dropdown active">
 	        <a class="nav-link dropdown-toggle" href="#" id="navbar-tonalidad" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 	          Tonalidad
 	        </a>
