@@ -20,7 +20,7 @@ var Escalas = {
 		'B': ['B','C#','D','E','F#','G','A','B']	
 	},
 	PentaMayor:{
-		pattern: 'T-T-TS-T',
+		pattern: 'T-T-TS-T-TS',
 		'C': ['C','D','E','G','A'],
 		'D': ['D','E','F#','A','B'],
 		'E': ['E','F#','G#','B','C#'],
@@ -30,7 +30,7 @@ var Escalas = {
 		'B': ['B','C#','D#','F#','G#']	
 	},
 	PentaMenor:{
-		pattern: 'TS-T-T-TS',
+		pattern: 'TS-T-T-TS-T',
 		'C': ['C','D#','F','G','A#'],
 		'D': ['D','F','G','A','C'],
 		'E': ['E','G','A','B','D'],

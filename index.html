@@ -31,6 +31,10 @@
 				escala = buildScale(scaleMode, key);
 				$('#pattern').html(escala.pattern);
 				$('.card').css('visibility', 'visible');
+				$('.fret-dot').hide();
+				if(escala.key){
+					$('#tonalidad').html(' ' + escala.key);
+				}
 			});
 			$('.items-tonalidad').click(function(event) {
 				key = $(this).attr('data-tonalidad');
