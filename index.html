@@ -7,100 +7,36 @@
 	<title>Guitar scales</title>
 	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+	<script src="assets/js/l10n/l10n.min.js"></script>
+	<script src="assets/js/l10n/localizations.js"></script>
 	<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
 	<script src="assets/js/escalas.js"></script>
 	<script src="assets/js/ScaleHandler.js"></script>
-	<script>
-		$(document).ready(function() {
-			ScaleHandler.init();
-			$('.fret-dot-container').click(function(event) {
-				var fret = $(this).attr('data-fret');
-				ScaleHandler.paintNoteDot(fret);
-			});
-			$('.items-escala').click(function(event) {
-				scaleMode = $(this).attr('data-escala');
-				$('.items-escala').removeClass('active');
-				$(this).addClass('active');
-				var escala = ScaleHandler.updateScale(scaleMode, null);
-				$('#escala').html('Escala: ' + $(this).attr('data-name-escala') + '<span id="tonalidad"></span>' + '<span id="notes-list"></span>');
-				$('#pattern').html(escala.pattern);
-				if(escala.key){
-					$('#tonalidad').html(' ' + escala.key);
-				}
-				$('.card').css('visibility', 'visible');
-				ScaleHandler.clearFretboard();
-			});
-			$('.items-tonalidad').click(function(event) {
-				$('.items-tonalidad').removeClass('active');
-				$(this).addClass('active');
-				key = $(this).attr('data-tonalidad');
-				$('#tonalidad').html(' ' + key);
-				$('#notes-list').html('');
-				$('#view-notes-btn').show();
-				$('#mark-notes-btn').show();
-				ScaleHandler.updateScale(null, key);
-				if(!$('#mark-notes-btn').hasClass('active')){
-					ScaleHandler.clearFretboard();
-				}
-				if($('#view-notes-btn').hasClass('active')){
-					$('#view-notes-btn').removeClass('active');
-					$('#view-notes-btn').trigger('click');
-				}
-				if($('#mark-notes-btn').hasClass('active')){
-					$('#mark-notes-btn').removeClass('active');
-					$('#mark-notes-btn').trigger('click');
-				}
-			});
-			$('#view-notes-btn').click(function(event) {
-				$(this).toggleClass('active');
-				var notes = ScaleHandler.getCurrentScale().notes;
-				if($(this).hasClass('active') && notes){
-					$('#notes-list').html('/&nbsp;&nbsp;&nbsp;' + notes.join(", "));
-				}else{
-					$('#notes-list').html('');
-				}
-			});
-			$('#mark-notes-btn').click(function(event) {
-				ScaleHandler.clearFretboard();
-				$(this).toggleClass('active');
-				var notes = ScaleHandler.getCurrentScale().notes;
-				if($(this).hasClass('active') && notes){
-					for (var i = 0; i < notes.length - 1; i++) {
-						$('.fret-dot[data-note="'+notes[i]+'"]').each(function(index, el) {
-							var fret = $(el).attr('data-fret');
-							ScaleHandler.paintNoteDot(fret);
-						});
-					}
-				}else{
-					ScaleHandler.clearFretboard();
-				}
-			});
-		});
-	</script>
+	<script src="assets/js/index.js"></script>
 </head>
 <body>
 	<nav class="navbar navbar-expand-lg navbar-light bg-white">
-	  <a class="navbar-brand" href="#">&#9835; Dónde esta mi Wah Wah ? &#9835;</a>
+	  <a id="nav-brand"	class="navbar-brand" href="#">%title</a>
 	  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
 	    <span class="navbar-toggler-icon"></span>
 	  </button>
 	  <div class="collapse navbar-collapse" id="navbarNavDropdown">
 	    <ul class="navbar-nav">
 	      <li class="nav-item dropdown active">
-	        <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-	          Escala
+	        <a id="dropdown-scales" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+	          %dropdown_scales
 	        </a>
 	        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-	          <a class="dropdown-item items-escala" href="#" data-escala="Mayor" data-name-escala="Mayor">Mayor</a>
-	          <a class="dropdown-item items-escala" href="#" data-escala="Menor" data-name-escala="Menor">Menor</a>
+	          <a class="dropdown-item items-escala" href="#" data-escala="Mayor" data-name-escala="Mayor">%mode_ionian</a>
+	          <a class="dropdown-item items-escala" href="#" data-escala="Menor" data-name-escala="Menor">%mode_aeolian</a>
 	          <a class="dropdown-item items-escala" href="#" data-escala="PentaMayor" data-name-escala="Pentatónica Mayor">Pentatónica Mayor</a>
 	          <a class="dropdown-item items-escala" href="#" data-escala="PentaMenor" data-name-escala="Pentatónica Menor">Pentatónica Menor</a>
 	        </div>
 	      </li>
 	      <li class="nav-item dropdown active">
-	        <a class="nav-link dropdown-toggle" href="#" id="navbar-tonalidad" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-	          Tonalidad
+	        <a id="dropdown-tonalidad" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+	          %dropdown_keys
 	        </a>
 	        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
 	          <a class="dropdown-item items-tonalidad" href="#" data-tonalidad="C">C</a>
