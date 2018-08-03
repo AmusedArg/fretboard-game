@@ -38,9 +38,19 @@
 				$('#tonalidad').html(' ' + key);
 				$('#notes-list').html('');
 				$('#view-notes-btn').show();
-				$('#view_notes-btn').removeClass('active');
+				$('#mark-notes-btn').show();
 				ScaleHandler.updateScale(null, key);
-				ScaleHandler.clearFretboard();		
+				if(!$('#mark-notes-btn').hasClass('active')){
+					ScaleHandler.clearFretboard();
+				}
+				if($('#view-notes-btn').hasClass('active')){
+					$('#view-notes-btn').removeClass('active');
+					$('#view-notes-btn').trigger('click');
+				}
+				if($('#mark-notes-btn').hasClass('active')){
+					$('#mark-notes-btn').removeClass('active');
+					$('#mark-notes-btn').trigger('click');
+				}
 			});
 			$('#view-notes-btn').click(function(event) {
 				$(this).toggleClass('active');
@@ -51,11 +61,26 @@
 					$('#notes-list').html('');
 				}
 			});
+			$('#mark-notes-btn').click(function(event) {
+				ScaleHandler.clearFretboard();
+				$(this).toggleClass('active');
+				var notes = ScaleHandler.getCurrentScale().notes;
+				if($(this).hasClass('active') && notes){
+					for (var i = 0; i < notes.length - 1; i++) {
+						$('.fret-dot[data-note="'+notes[i]+'"]').each(function(index, el) {
+							var fret = $(el).attr('data-fret');
+							ScaleHandler.paintNoteDot(fret);
+						});
+					}
+				}else{
+					ScaleHandler.clearFretboard();
+				}
+			});
 		});
 	</script>
 </head>
 <body>
-	<nav class="navbar navbar-expand-lg navbar-light bg-light">
+	<nav class="navbar navbar-expand-lg navbar-light bg-white">
 	  <a class="navbar-brand" href="#">&#9835; Dónde esta mi Wah Wah ? &#9835;</a>
 	  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
 	    <span class="navbar-toggler-icon"></span>
@@ -79,16 +104,11 @@
 	        </a>
 	        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
 	          <a class="dropdown-item items-tonalidad" href="#" data-tonalidad="C">C</a>
-	          <a class="dropdown-item items-tonalidad" href="#" data-tonalidad="C#">C#</a>
 	          <a class="dropdown-item items-tonalidad" href="#" data-tonalidad="D">D</a>
-	          <a class="dropdown-item items-tonalidad" href="#" data-tonalidad="D#">D#</a>
 	          <a class="dropdown-item items-tonalidad" href="#" data-tonalidad="E">E</a>
 	          <a class="dropdown-item items-tonalidad" href="#" data-tonalidad="F">F</a>
-	          <a class="dropdown-item items-tonalidad" href="#" data-tonalidad="F#">F#</a>
 	          <a class="dropdown-item items-tonalidad" href="#" data-tonalidad="G">G</a>
-	          <a class="dropdown-item items-tonalidad" href="#" data-tonalidad="G#">G#</a>
 	          <a class="dropdown-item items-tonalidad" href="#" data-tonalidad="A">A</a>
-	          <a class="dropdown-item items-tonalidad" href="#" data-tonalidad="A#">A#</a>
 	          <a class="dropdown-item items-tonalidad" href="#" data-tonalidad="B">B</a>
 	        </div>
 	      </li>
@@ -101,6 +121,7 @@
 	    <h6 id="pattern" class="card-subtitle mb-2 text-muted"></h6>
 	    <!-- <p id="pattern" class="card-text"></p> -->
 	    <button id="view-notes-btn" type="button" class="btn btn-outline-primary">Ver Notas</button>
+	    <button id="mark-notes-btn" type="button" class="btn btn-outline-primary">Marcar Notas</button>
 	  </div>
 	</div>
 	<!-- <div id="escala-title"><span id="escala"></span> <span id="tonalidad"></span></div> -->

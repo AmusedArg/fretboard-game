@@ -5,6 +5,12 @@ html, body{
 nav{
 	box-shadow: 1px 1px 5px -2px;
 }
+.btn-outline-primary:hover{
+    box-shadow: inset 0px 0px 2px 0px;
+    color: #007bff !important;
+    background-color: initial !important;
+    border-color: initial !important;
+}
 #guitar-container{
 	position: absolute;
     left: 0;
@@ -58,8 +64,22 @@ nav{
     visibility: hidden;
     box-shadow: 1px 1px 5px -2px;
 }
-#view-notes-btn{
+#view-notes-btn, #mark-notes-btn{
 	display: none;
+}
+#view-notes-btn:hover, #mark-notes-btn:hover{
+    box-shadow: inset 0px 0px 2px 0px;
+    color: #007bff !important;
+    background-color: initial !important;
+    border-color: initial !important; 
+}
+#view-notes-btn:focus, #mark-notes-btn:focus{
+    box-shadow: none;
+}
+#view-notes-btn.active:hover, #mark-notes-btn.active:hover{
+    color: #fff !important;
+    background-color: #007bff !important;
+    border-color: #007bff !important;
 }
 #notes-list{
     margin-left: 1em;

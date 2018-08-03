@@ -1,7 +1,7 @@
 var ScaleHandler = (function() {
     var CORRECT_NOTE_COLOR = "#8BC34A";
     var WRONG_NOTE_COLOR = "red";
-    var ROOT_NOTE_COLOR = "#8BC34A";
+    var ROOT_NOTE_COLOR = "#FF9800";
     var notesDots;
     var scales = {
         Mayor: {
