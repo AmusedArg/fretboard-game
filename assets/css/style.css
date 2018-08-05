@@ -239,9 +239,10 @@ nav{
 .fret-dot-container.fret-A-22{top: 65%; width: 25px; left: 88%;}
 .fret-dot-container.fret-E-22{top: 78.5%; width: 25px; left: 88%;}
 
-@media (max-width: 1300px) {
+@media (max-width: 1366px) {
     #fretboard{
         height: 230px;
+        width: 1038px;
         object-fit: initial;
     }
     .fret-dot-container.fret-e-1{top: 24%; width: 66px; left: 105px;}
