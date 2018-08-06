@@ -6,7 +6,9 @@ String.toLocaleString({
 		"%mode_ionian": "Ionian (Natural Major)",
 		"%mode_aeolian": "Aeolian (Natural Minor)",
 		"%major_pentatonic": "Minor Pentatonic",
-		"%minor_pentatonic": "Major Pentatonic"
+		"%minor_pentatonic": "Major Pentatonic",
+		"%view_notes_btn": "View Notes",
+		"%set_notes_btn": "Set Notes Fretboard"
 	},
 	"es": {
 		"%title": "&#9835; Dónde esta mi Wah Wah ? &#9835;",
@@ -15,6 +17,8 @@ String.toLocaleString({
 		"%mode_ionian": "Jónico (Mayor Natural)",
 		"%mode_aeolian": "Eólico (Menor Natural)",
 		"%major_pentatonic": "Pentatónica Mayor",
-		"%minor_pentatonic": "Pentatónica Menor" 
+		"%minor_pentatonic": "Pentatónica Menor",
+		"%view_notes_btn": "Ver Notas",
+		"%set_notes_btn": "Marcar Notas"
 	}
 });

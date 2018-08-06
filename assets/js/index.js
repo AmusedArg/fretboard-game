@@ -82,6 +82,8 @@ function localizeSite(){
 	$('a[data-escala="Menor"]').html(l("%mode_aeolian"));
 	$('a[data-escala="PentaMayor"]').html(l("%major_pentatonic"));
 	$('a[data-escala="PentaMenor"]').html(l("%minor_pentatonic"));
+	$('#mark-notes-btn').html(l("%set_notes_btn"));
+	$('#view-notes-btn').html(l("%view_notes_btn"));
 
 }
 
