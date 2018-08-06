@@ -36,11 +36,11 @@ var ScaleHandler = (function() {
         },
         PentaMenor:{
             pattern: 'TS-T-T-TS-T',
-            'C': ['C','D#','F','G','A#'],
+            'C': ['C','Eb','F','G','Bb'],
             'D': ['D','F','G','A','C'],
             'E': ['E','G','A','B','D'],
-            'F': ['F','G#','A#','C','D#'],
-            'G': ['G','A#','C','D','F'],
+            'F': ['F','Ab','Bb','C','Eb'],
+            'G': ['G','Bb','C','D','F'],
             'A': ['A','C','D','E','G'],
             'B': ['B','D','E','F#','A'] 
         }
@@ -56,7 +56,7 @@ var ScaleHandler = (function() {
     var init = function(){
         notesDots = $('.fret-dot');
         notesDots.each(function(index, el) {
-            $(this).html($(this).attr('data-note'));
+            $(this).html($(this).attr('data-note').split("/")[0]);
         });
     };
 
@@ -77,12 +77,12 @@ var ScaleHandler = (function() {
 
     var paintNoteDot = function(fret){
         var el = $('span[data-fret="'+fret+'"]');
-        var note = el.attr('data-note');
+        var note = el.attr('data-note').split("/");
         el.toggle();
         if(currentScale.notes){
             for (var i = 0; i < currentScale.notes.length; i++) {
-                if(currentScale.notes[i] === note){
-                    if(currentScale.key === note){
+                if(note.indexOf(currentScale.notes[i]) >= 0){
+                    if(note.indexOf(currentScale.key) >= 0){
                         el.css('background-color', ROOT_NOTE_COLOR);
                     }else{
                         el.css('background-color', CORRECT_NOTE_COLOR);

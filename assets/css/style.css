@@ -85,6 +85,13 @@ nav{
     margin-left: 1em;
 }
 
+.fret-dot-container.fret-e-0{top: 19%; width: 68px; left: 2.5%;}
+.fret-dot-container.fret-B-0{top: 29%; width: 68px; left: 2.5%;}
+.fret-dot-container.fret-G-0{top: 39%; width: 68px; left: 2.5%;}
+.fret-dot-container.fret-D-0{top: 49%; width: 68px; left: 2.5%;}
+.fret-dot-container.fret-A-0{top: 59%; width: 68px; left: 2.5%;}
+.fret-dot-container.fret-E-0{top: 70%; width: 68px; left: 2.5%;}
+
 .fret-dot-container.fret-e-1{top: 19%; width: 68px; left: 9%;}
 .fret-dot-container.fret-B-1{top: 29%; width: 68px; left: 9%;}
 .fret-dot-container.fret-G-1{top: 39%; width: 68px; left: 9%;}
@@ -239,11 +246,20 @@ nav{
 .fret-dot-container.fret-A-22{top: 65%; width: 25px; left: 88%;}
 .fret-dot-container.fret-E-22{top: 78.5%; width: 25px; left: 88%;}
 
-@media (max-width: 1300px) {
+@media (max-width: 1366px) {
     #fretboard{
         height: 230px;
+        width: 1038px;
         object-fit: initial;
     }
+
+    .fret-dot-container.fret-e-0{top: 24%; width: 66px; left: 25px;}
+    .fret-dot-container.fret-B-0{top: 32.5%; width: 66px; left: 25px;}
+    .fret-dot-container.fret-G-0{top: 41%; width: 66px; left: 25px;}
+    .fret-dot-container.fret-D-0{top: 50%; width: 66px; left: 25px;}
+    .fret-dot-container.fret-A-0{top: 58.5%; width: 66px; left: 25px;}
+    .fret-dot-container.fret-E-0{top: 67%; width: 66px; left: 25px;}
+
     .fret-dot-container.fret-e-1{top: 24%; width: 66px; left: 105px;}
     .fret-dot-container.fret-B-1{top: 32.5%; width: 66px; left: 105px;}
     .fret-dot-container.fret-G-1{top: 41%; width: 66px; left: 105px;}
