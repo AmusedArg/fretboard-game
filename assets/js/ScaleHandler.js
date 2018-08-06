@@ -75,6 +75,13 @@ var ScaleHandler = (function() {
         return currentScale;
     };
 
+    var reset = function(){
+        currentScale.key = null;
+        currentScale.notes = null;
+        currentScale.pattern = null;
+        currentScale.scaleMode = null;
+    };
+
     var paintNoteDot = function(fret){
         var el = $('span[data-fret="'+fret+'"]');
         var note = el.attr('data-note').split("/");
@@ -120,6 +127,7 @@ var ScaleHandler = (function() {
         updateScale: updateScale,
         paintNoteDot: paintNoteDot,
         getCurrentScale: getCurrentScale,
-        clearFretboard: clearFretboard
+        clearFretboard: clearFretboard,
+        reset: reset
     };
 })();

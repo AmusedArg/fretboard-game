@@ -64,6 +64,14 @@ nav{
     visibility: hidden;
     box-shadow: 1px 1px 5px -2px;
 }
+.card-close{
+    position: absolute;
+    top: 0;
+    right: .5em;
+    color: #007bffbd;
+    font-size: 1.2rem;
+    text-decoration: none;
+}
 #view-notes-btn, #mark-notes-btn{
 	display: none;
 }

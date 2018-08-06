@@ -57,6 +57,16 @@ $(document).ready(function() {
 			ScaleHandler.clearFretboard();
 		}
 	});
+	$('.card-close').click(function(event) {
+		ScaleHandler.clearFretboard();
+		ScaleHandler.reset();
+		$('#view-notes-btn').removeClass('active');
+		$('#mark-notes-btn').removeClass('active');
+		$('#notes-list').html('');
+		$('#pattern').html('');
+		$('#tonalidad').html('');
+		$('.card').css('visibility', 'hidden');
+	});
 	localizeSite();
 });
 
