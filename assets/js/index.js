@@ -1,5 +1,6 @@
 $(document).ready(function() {
 	ScaleHandler.init();
+	showTutorial();
 	$('.fret-dot-container').click(function(event) {
 		var fret = $(this).attr('data-fret');
 		ScaleHandler.paintNoteDot(fret);
@@ -92,9 +93,19 @@ function localizeSite(){
 	$('a[data-escala="Menor"]').html(l("%mode_aeolian"));
 	$('a[data-escala="PentaMayor"]').html(l("%major_pentatonic"));
 	$('a[data-escala="PentaMenor"]').html(l("%minor_pentatonic"));
+	$('a[data-escala="MelodicaMenor"]').html(l("%minor_melodic"));
+	$('a[data-escala="ArmonicaMenor"]').html(l("%minor_armonic"));
 	$('#mark-notes-btn').html(l("%set_notes_btn"));
 	$('#view-notes-btn').html(l("%view_notes_btn"));
 
+}
+
+function showTutorial() {
+	$('.card #escala').html("Elige una escala y la tonalidad del menu superior para empezar");
+	$('.card #pattern').html("Toca las notas de la guitarra para ver si acertaste!");
+	$('.card').hide();
+	$('.card').css('visibility', 'visible');
+	$('.card').slideDown('400');
 }
 
 var l = function (string) {
