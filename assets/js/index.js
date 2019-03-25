@@ -11,7 +11,7 @@ $(document).ready(function() {
 		$(this).addClass('active');
 		var escala = ScaleHandler.updateScale(scaleMode, null);
 		$('#escala').html('Escala: ' + $(this).attr('data-name-escala') + '<span id="tonalidad"></span>' + '<span id="notes-list"></span>');
-		$('#pattern').html(escala.pattern);
+		$('#pattern').html("Patrón de intervalos: " + escala.pattern);
 		if(escala.key){
 			$('#tonalidad').html(' ' + escala.key);
 		}
